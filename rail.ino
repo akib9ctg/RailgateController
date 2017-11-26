@@ -4,13 +4,17 @@ int mdelay;
 
 void setup() {
 
-  pinMode(13,OUTPUT);
+  pinMode(13,OUTPUT); // Green LED pin
+  pinMode(7,OUTPUT); //Buzzer & Red Light pin
+
+  //IR sensors pins
   pinMode(8,INPUT);
   pinMode(9,INPUT);
-  pinMode(7,OUTPUT);
 
+  //Initially turning on the  Green LED.
   digitalWrite(13,HIGH);
 
+  //motor pins
   mpin1 = 2;
   mpin2 = 4;
 
@@ -25,9 +29,15 @@ void setup() {
 void loop() 
 {
   
+  //IF IR sensors sense the train, then it will give LOW signal.
   if(digitalRead(8)==LOW){
+    
+    //Turning off the GREEN LED
     digitalWrite(7, HIGH);
+
+    //Turning on the Buzzer & RED LED
     digitalWrite(13, LOW);
+
     Serial.println("buzzer on");
     
     
@@ -46,6 +56,7 @@ void loop()
     
     digitalWrite(7, LOW);
     digitalWrite(13, HIGH);
+    
     Serial.println("buzzer off");
     
     delay(500);

@@ -29,7 +29,8 @@ void loop()
     digitalWrite(7, HIGH);
     digitalWrite(13, LOW);
     Serial.println("buzzer on");
-
+    
+    
     //Shutting down the gate
     digitalWrite(mpin1, HIGH);
     digitalWrite(mpin2, LOW);

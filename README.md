@@ -21,8 +21,12 @@ Some Tips :
 7. Just look for the signal from S1 sensor, if you get it just colse the gate (turn on the motor for 250+ ms)& turn on the buzzer & when   
    you get signal from sensor S2, open the gate & turn of the buzzer. That's it for one way implementation.
 
+
 ==> Two way implementation.
+
 8. Now, we have 2 sensors S1 & S2.
+
     => If you get signal from S1, check that if S2 is already been triggered. If so, the train is passing the gate, otherwise it's just 
        coming.
+
     => Follow the above logic for the reverse direction.
